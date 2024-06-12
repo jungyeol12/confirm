@@ -1,0 +1,296 @@
+@charset "utf-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    color: #333;
+}
+
+#wrap {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+head-wrap {
+    width: 100%;
+    height: 100px;
+    border: 1px solid #000;
+}
+header {
+    width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    position: relative;
+    border: 1px solid #000;
+}
+
+.logo {
+    width: 200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #000;
+}
+.logo a {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.menu {
+    z-index: 1;
+    position: absolute;
+    top: 60px;
+    right: 0;
+}
+
+.main-menu {
+    float: right;
+}
+
+.main-menu ul {
+    display: flex;
+}
+
+.main-menu ul li a {
+    display: block;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #000;
+}
+
+.sub-menu {
+    float: right;
+    width: 100%;
+    height: 200px;
+    display: none;
+}
+.sub-menu div {
+    width: 100%;
+    height: 200px;
+    background-color: black;
+}
+.sub-menu ul {
+    display: flex;
+    float: right;
+}
+.sub-menu ul li ul {
+    display: block;
+}
+.sub-menu ul li ul li a {
+    display: block;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+}
+.sub-menu ul li ul li a:hover {
+    background-color: white;
+    color: black;
+}
+.main-menu ul li:hover a {
+    background-color: black;
+    color: white;
+}
+
+.slide {
+    width: 1200px;
+    margin: 0 auto;
+    height: 300px;
+    border: 1px solid #000;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide > div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 100%;
+}
+.slide > div:first-child {
+    top: 0;
+}
+
+.img1 {
+    background-color: red;
+}
+.img2 {
+    background-color: green;
+}
+.img3 {
+    background-color: blue;
+}
+
+#cont {
+    width: 1200px;
+    height: 200px;
+    margin: 0 auto;
+    display: flex;
+    border: 1px solid #000;
+}
+
+.news {
+    width: 33%;
+    height: 100%;
+    border-right: 1px solid #000;
+}
+.news ul {
+    display: flex;
+    border-bottom: 1px solid #000;
+}
+.news ul li {
+    padding: 8px;
+}
+.news ul li:first-child {
+    margin-right: 30px;
+}
+.tab {
+    width: 100px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+}
+
+.gallery {
+    width: 34%;
+    height: 100%;
+    border-right: 1px solid #000;
+}
+.gallery ul {
+    display: flex;
+    margin-top: 20px;
+    padding: 10px;
+}
+.gallery ul li {
+    padding: 10px;
+}
+.gallery ul li div {
+    width: 80px;
+    height: 80px; 
+}
+.gallery-img1 {
+    background-color: rebeccapurple;
+}
+.gallery-img2 {
+    background-color: blue;
+}
+.gallery-img3 {
+    background-color: yellow;
+}
+
+.links {
+    width: 33%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.links a {
+    font-size: 26px;
+    font-weight: bold;
+}
+.foot-wrap {
+    width: 100%;
+    height: 100px;
+    border: 1px solid #000;
+}
+.sns {
+    width: 100%;
+    height: 50%;
+    border-bottom: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sns ul {
+    padding: 5px;
+}
+.sns1 {
+    width: 20px;
+    border-radius: 50%;
+    height: 20px;
+    background-color: red;
+}
+.sns2 {
+    width: 20px;
+    border-radius: 50%;
+    height: 20px;
+    background-color: green;
+}
+.sns3 {
+    width: 20px;
+    border-radius: 50%;
+    height: 20px;
+    background-color: purple;
+}
+footer {
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    border: 1px solid #000;
+}
+.copy {
+    width: calc(100% - 200px);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.foot-wrap2 {
+    width: 200px;
+    height: 100%;
+    border: 1px solid #000;
+}
+.family {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+#popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    display: none;
+}
+
+.box {
+    width: 400px;
+    height: 600px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: calc(50% - 800px);
+    position: relative;
+}
+
+.title {
+    padding: 10px;
+}
+.txt-box {
+    padding: 10px;
+}
+button {
+    width: 120px;
+    height: 40px;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    cursor: pointer;
+}
