@@ -3,24 +3,23 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+    color: #333;
     text-decoration: none;
     list-style: none;
-    color: #333;
-    box-sizing: border-box;
 }
 
 #wrap {
-    width: 1200px;
     margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
     border: 1px solid #000;
+    width: 1200px;
+    flex-wrap: wrap;
+    display: flex;
 }
 
 header {
     width: 100%;
     height: 100px;
-    border: 1px solid #000;
     display: flex;
     position: relative;
 }
@@ -28,21 +27,19 @@ header {
 .logo {
     width: 200px;
     height: 100%;
-    border-right: 1px solid #000;
+    font-size: 26px;
+    font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.logo a {
-    font-weight: bold;
-    font-size: 26px;
+    border: 1px solid #000;
 }
 
 .menu {
     position: absolute;
-    top: 40px;
     right: 20px;
-    z-index: 1;
+    top: 30px;
+    z-index: 2;
 }
 
 .main-menu ul {
@@ -55,7 +52,7 @@ header {
     line-height: 40px;
     text-align: center;
     border: 1px solid #000;
-    background-color: beige;
+    background-color: khaki;
 }
 
 .sub-menu {
@@ -64,7 +61,7 @@ header {
 .sub-menu ul {
     display: flex;
 }
-.sub-menu ul li ul{
+.sub-menu ul li ul {
     display: block;
 }
 .sub-menu ul li ul li a {
@@ -75,155 +72,216 @@ header {
     text-align: center;
     background-color: ivory;
 }
-.main-menu ul li a:hover {
-    background-color: snow;
+.sub-menu ul li ul li:hover a {
+    background-color: khaki;
+    font-weight: bold;
 }
-.sub-menu ul li ul li a:hover {
-    background-color: whitesmoke;
+
+#cont {
+    border: 1px solid #000;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .slide {
     width: 100%;
     height: 300px;
     border: 1px solid #000;
-    overflow: hidden;
     position: relative;
+    overflow: hidden;
 }
-
-.slider {
+.slide > img {
+    position: absolute;
     width: 100%;
     height: 100%;
-    position: absolute;
+    top: 100%;
+}
+.slide img:first-child {
+    top: 0;
 }
 
-.s1 {background-color: hotpink;}
-.s2 {background-color: khaki;}
-.s3 {background-color: aquamarine;}
 
-#cont {
-    width: 100%;
-    height: 200px;
-    border: 1px solid #000;
-    display: flex;
-}
 
 .board {
     width: 33%;
-    height: 100%;
-    padding: 20px 20px 0 0;
-    float: left;
+    height: 200px;
     border: 1px solid #000;
 }
-.tabs {
-    width: 400px;
-    height: 50px;
+.tab ul {
+    display: flex;
 }
-.tabs > div {
-    float: left; /* 탭 나란히 */
-    height: 50px;
-    line-height: 50px;
-    width: 80px;
-    background-color: #888;
+.tab ul li {
+    padding: 10px;
     text-align: center;
+    width: 100%;
     border: 1px solid #000;
     cursor: pointer;
 }
-
-.tabs .tab-news {
-    background-color: #fff;
-    border-bottom: 0;
+.on {
+    background-color: darkorange;
+    color: white;
 }
-.tabs .tab-gallery {
-    border-left:0;
-}
-
-.news, .gallery {
+.notice {
     width: 100%;
-    height: 130px;
-    padding-left: 5px;
-    border: 1px solid #000;
+    height: 100%;
 }
-
-.news ul {
-    display: flex;
-    padding: 5px;
+.notice ul li {
+    padding: 8px;
 }
-.news ul li:first-child {
-    margin-right: 80px;
+.notice ul li a:hover {
+    text-decoration: underline;
 }
-
+.notice ul li span {
+    margin-left: 80px;
+}
 .gallery {
+    width: 100%;
+    height: 100%;
     display: none;
-    align-items: center;
-    justify-content: center;
 }
-
-.gallery .img {
+.gallery ul {
+    display: flex;
+    margin-top: 10px;
+}
+.gallery ul li img {
     width: 100px;
     height: 100px;
-    border: 1px solid #000;
-    margin-left: 10px;
-    margin-right: 20px;
 }
-
-.img1 {background-color: bisque;}
-.img2 {background-color: khaki;}
-.img3 {background-color: aqua;}
-
+.img-wrap {
+    display: flex;
+    justify-content: center;
+}
+.gallery ul li p {
+    color: black;
+    text-align: center;
+}
 .banner {
-    width: 34%;
-    height: 100%;
-    border-right: 1px solid #000;
-}
-
-.links {
     width: 33%;
+    height: 200px;
+    border: 1px solid #000;
+    background-color: ivory;
+}
+.banner-wrap {
+    width: 100%;
     height: 100%;
+    align-items: center;
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.banner p {
+    padding: 30px;
+    font-weight: bold;
+    font-size: 24px;
+    color:orange;
+}
+.banner a {
+    background-color: olive;
+    display: flex;
+    width: 100px;
+    height: 30px;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 270px;
+    margin-top: 50px;
+    color: white;
+}
+.link {
+    width: 34%;
+    height: 200px;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 footer {
     width: 100%;
     height: 100px;
+    border: 1px solid #000;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .flogo {
+    border: 1px solid #000;
     width: 200px;
     height: 100%;
-    border-right: 1px solid #000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.flogo a {
-    font-weight: bold;
     font-size: 26px;
-}
-
-.copy {
-    width: calc(100% - 400px);
-    height: 100%;
+    font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-right: 1px solid #000;
 }
 
 .sns {
     width: 200px;
     height: 100%;
+    border: 1px solid #000;
+}
+
+.sns ul {
+    display: flex;
+
+}
+
+.sns ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.sns ul li a {
+    font-size: 14px;
+    text-align: center;
+}
+
+.sns ul li img {
+    width: 30px;
+    height: 30px;
+}
+
+#popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 100;
     display: flex;
     align-items: center;
     justify-content: center;
+    display: none;
 }
 
-.snss {
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-    margin-left: 10px;
-    margin-right: 10px;
+#popup .box {
+    background-color: white;
+    position: relative;
+    width: 400px;
+    height: 500px;
+    padding: 20px 30px;
 }
-.sns1 {background-color: palevioletred;}
-.sns2 {background-color: wheat;}
-.sns3 {background-color: indigo;}
+
+#popup .box .title {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+#popup .box button {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 80px;
+    height: 30px;
+    border: none;
+    background-color: indianred;
+    color: white;
+    cursor: pointer;
+}
